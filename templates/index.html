@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Human vs AI Voice Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">VoiceAI</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">How it Works</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>🎙️ Human vs AI Voice Recognition</h1>
+        <p class="subtitle">Upload an audio file and let our AI detect whether it’s human or machine‑generated.</p>
+
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="audio" accept=".wav,.mp3,.m4a,.mp4" class="file-input">
+            <button type="submit" class="btn">Upload & Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result success">
+                <h2>Prediction: {{ prediction }}</h2>
+            </div>
+        {% endif %}
+
+        {% if error %}
+            <div class="result error">
+                <h3>{{ error }}</h3>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 VoiceAI Project | Built with Flask & TensorFlow</p>
+    </footer>
+</body>
+</html>
