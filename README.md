@@ -1,21 +1,5 @@
-🎙️ Human vs AI Voice Recognition
+**🎙️ Human vs AI Voice Recognition**
 This project demonstrates how deep learning can distinguish between human voices and AI‑generated voices. It combines TensorFlow/Keras for model inference, Librosa for audio preprocessing, and Flask for deployment into a modern web application.
-
-📂 Project Structure
-voice_flask_app/
-│
-├── app.py                # Flask application
-├── utils.py              # Audio preprocessing functions
-├── model/
-│   └── voice_model.keras # Trained CNN model
-├── templates/
-│   └── index.html        # Frontend HTML
-├── static/
-│   └── style.css         # Frontend CSS
-└── uploads/              # Uploaded audio files
-
-
-
 📖 Project Overview
 The Human vs AI Voice Recognition system is designed to detect whether an uploaded audio file contains a real human voice or an AI‑generated synthetic voice.
 - Problem Statement: With the rise of generative AI, distinguishing authentic voices from synthetic ones is becoming critical for security, media verification, and fraud prevention.
